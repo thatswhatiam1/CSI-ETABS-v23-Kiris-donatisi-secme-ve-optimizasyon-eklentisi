@@ -12,8 +12,8 @@ yapılmaz.
 
 | Sürüm | Destek |
 |---|---|
-| v10 | ✅ |
-| v10'dan eski | ❌ |
+| v12 | ✅ |
+| v12'den eski | ❌ |
 
 ### Güvenlik açığı bildirme
 
@@ -51,8 +51,9 @@ bakın: her çıktı mühendis tarafından kontrol edilmelidir.
 - `KUR.cmd` eklenti dosyalarını `C:\ETABSPlugins\KirisDone-v5\` klasörüne
   kopyalar ve o klasörde kalmış eski bir `CSiAPIv1.dll` kopyasını siler; başka
   bir yere yazmaz ve kayıt defterine dokunmaz.
-- `bagimsiz\BASLAT.cmd`, .NET çalışma zamanı eksikse ve kullanıcı onaylarsa
-  tarayıcıda Microsoft'un .NET indirme sayfasını açar.
+- `bagimsiz\BASLAT.cmd` programı başlatır. v12 paketinde bağımsız program
+  Microsoft .NET 8 çalışma zamanını kendi klasöründe taşır; başka bir şey
+  indirmez, kurmaz, tarayıcı açmaz.
 - ETABS'ın kendi API kütüphanesi (`CSiAPIv1.dll`) pakete dahil değildir;
   ETABS'ın kurulu kopyası kullanılır.
 
@@ -62,12 +63,12 @@ Dosyalar kod imzalı **değildir**; Windows SmartScreen uyarı verebilir. Paketi
 yalnızca bu reponun Releases bölümünden indirin ve özetini kontrol edin:
 
 ```powershell
-Get-FileHash .\KirisDone-v10.zip -Algorithm SHA256
+Get-FileHash .\KirisDone-v12.zip -Algorithm SHA256
 ```
 
 | Paket | SHA-256 |
 |---|---|
-| `KirisDone-v10.zip` | `37C8245673F6C54ECBD493A88833A5172FF90C5D15EA1B451DC1749753CACC72` |
+| `KirisDone-v12.zip` | `DAE95C8F09DD70559B2CE7AB60D9BD48CF94C1AC531FCF805BFD755FAA178A69` |
 
 ---
 
@@ -80,8 +81,8 @@ Security fixes ship as a new release; older versions are not patched.
 
 | Version | Supported |
 |---|---|
-| v10 | ✅ |
-| older than v10 | ❌ |
+| v12 | ✅ |
+| older than v12 | ❌ |
 
 ### Reporting a vulnerability
 
@@ -119,8 +120,9 @@ checked by an engineer.
 - `KUR.cmd` copies the plugin files to `C:\ETABSPlugins\KirisDone-v5\` and
   deletes a stale `CSiAPIv1.dll` copy left in that folder; it writes nowhere
   else and does not touch the registry.
-- `bagimsiz\BASLAT.cmd` opens Microsoft's .NET download page in the browser,
-  only if the .NET runtime is missing and the user agrees.
+- `bagimsiz\BASLAT.cmd` starts the program. In the v12 package the standalone
+  program carries the Microsoft .NET 8 runtime in its own folder; it downloads
+  nothing, installs nothing and opens no browser.
 - ETABS' own API library (`CSiAPIv1.dll`) is not shipped; the installed ETABS
   copy is used.
 
@@ -130,9 +132,9 @@ The files are **not** code-signed; Windows SmartScreen may warn. Download the
 package only from this repository's Releases and check its hash:
 
 ```powershell
-Get-FileHash .\KirisDone-v10.zip -Algorithm SHA256
+Get-FileHash .\KirisDone-v12.zip -Algorithm SHA256
 ```
 
 | Package | SHA-256 |
 |---|---|
-| `KirisDone-v10.zip` | `37C8245673F6C54ECBD493A88833A5172FF90C5D15EA1B451DC1749753CACC72` |
+| `KirisDone-v12.zip` | `DAE95C8F09DD70559B2CE7AB60D9BD48CF94C1AC531FCF805BFD755FAA178A69` |

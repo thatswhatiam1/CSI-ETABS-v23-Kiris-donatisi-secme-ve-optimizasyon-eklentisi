@@ -50,7 +50,7 @@ açın ve `OKU-BENI.txt`'yi izleyin. Kısaca:
 | Kullanım | Gerekenler | Nasıl |
 |---|---|---|
 | ETABS eklentisi | ETABS 23 (ya da .NET 8 tabanlı bir sürüm) | ETABS kapalıyken `KUR.cmd`, sonra **Tools › Add/Show Plugins** |
-| Bağımsız program | .NET 8 Desktop Runtime (x64); ETABS gerekmez | `bagimsiz\BASLAT.cmd` |
+| Bağımsız program | Windows x64; ETABS ve .NET kurulumu gerekmez (v12'den beri .NET paketin içinde, bu yüzden paket ~70 MB) | `bagimsiz\BASLAT.cmd` |
 
 Bağımsız program ETABS 22.5 ve 23'ün tablo çıktılarını tanır.
 
@@ -114,7 +114,7 @@ folder and follow `OKU-BENI.txt` (Turkish). In short:
 | Use | Requirements | How |
 |---|---|---|
 | ETABS plugin | ETABS 23 (or any .NET 8 based version) | run `KUR.cmd` with ETABS closed, then **Tools › Add/Show Plugins** |
-| Standalone | .NET 8 Desktop Runtime (x64); no ETABS needed | `bagimsiz\BASLAT.cmd` |
+| Standalone | Windows x64; neither ETABS nor a .NET install is needed (since v12 .NET ships inside the package, hence ~70 MB) | `bagimsiz\BASLAT.cmd` |
 
 The standalone program recognises the table exports of ETABS 22.5 and 23.
 
